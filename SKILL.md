@@ -181,4 +181,6 @@ User can request:
 
 - **Tool/Product Mentions:** See `references/tool-mentions.md` for subtlety levels 1-10 and placement guidelines
 - **Subreddit Guides:** See `references/subreddits.md` for r/jobs, r/RemoteWork, r/careerguidance, r/antiwork specifics
+- **Extended Subreddit Analysis:** See `references/subreddits-extended.md` for 20+ additional subreddits including r/digitalnomad, r/Entrepreneur, r/indiehackers, r/automation, r/claudecode, r/aiagents, r/Productivity, r/nocode, and more
+- **Tech Subreddit Deep Dive:** See `references/subreddit-analysis-claude-agentsofai.md` for r/claude and r/AgentsOfAI
 - **Examples:** See `references/examples.md` for detailed good vs bad comparisons
