@@ -60,6 +60,11 @@ A toolkit for creating animated GIFs optimized for Slack. Provides composable an
 
 **Original Source:** [anthropics/skills - slack-gif-creator](https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator)
 
+### [data-storytelling](./skills/data-storytelling/)
+Transform data into compelling narratives using visualization, context, and persuasive structure. Use when presenting analytics to stakeholders, creating data reports, or building executive presentations. Includes story frameworks (problem-solution, trend, comparison), visualization techniques, presentation templates, and best practices for writing headlines and handling uncertainty.
+
+**Original Source:** [wshobson/agents](https://github.com/wshobson/agents/tree/main/plugins/business-analytics/skills/data-storytelling)
+
 ---
 
 ## Installation
@@ -85,6 +90,7 @@ cp -r skills/youtube-music ~/.claude/skills/
 cp -r skills/nano-banana-pro ~/.claude/skills/
 cp -r skills/canvas-design ~/.claude/skills/
 cp -r skills/slack-gif-creator ~/.claude/skills/
+cp -r skills/data-storytelling ~/.claude/skills/
 
 # Or install all skills at once
 cp -r skills/* ~/.claude/skills/
@@ -134,16 +140,19 @@ Happycapy-skills/
     ├── canvas-design/
     │   ├── SKILL.md
     │   └── README.md
-    └── slack-gif-creator/
+    ├── slack-gif-creator/
+    │   ├── SKILL.md
+    │   ├── README.md
+    │   ├── LICENSE.txt
+    │   ├── requirements.txt
+    │   └── core/
+    │       ├── easing.py
+    │       ├── frame_composer.py
+    │       ├── gif_builder.py
+    │       └── validators.py
+    └── data-storytelling/
         ├── SKILL.md
-        ├── README.md
-        ├── LICENSE.txt
-        ├── requirements.txt
-        └── core/
-            ├── easing.py
-            ├── frame_composer.py
-            ├── gif_builder.py
-            └── validators.py
+        └── README.md
 ```
 
 Each skill follows the standard Claude Code skill structure with a `SKILL.md` file and any necessary reference materials.
