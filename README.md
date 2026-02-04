@@ -10,6 +10,11 @@ Browse through these skills to find tools for content creation, presentation des
 
 ## Skills
 
+### [happycapy-skill-creator](./skills/happycapy-skill-creator/)
+Automated Claude skill creator for HappyCapy environment. Finds and adapts similar skills from anthropics/skills repository using semantic search, LLM-powered adaptation, and auto-fix for compatibility. Creates ready-to-install `.skill` files with 90%+ success rate. Complements the official `/skill-creator` by automating the creation process.
+
+**Original Source:** [Y1fe1-Yang/happycapy-skill-creator](https://github.com/Y1fe1-Yang/happycapy-skill-creator)
+
 ### [reddit-post-writer](./skills/reddit-post-writer/)
 Generate authentic Reddit posts that sound human, avoid AI detection, and spark engagement across 25+ subreddits. Includes 7-persona committee review system and subreddit-specific guidelines for different communities.
 
@@ -50,6 +55,7 @@ cd Happycapy-skills
 
 # Install a specific skill
 mkdir -p ~/.claude/skills
+cp -r skills/happycapy-skill-creator ~/.claude/skills/
 cp -r skills/reddit-post-writer ~/.claude/skills/
 cp -r skills/frontend-slides ~/.claude/skills/
 cp -r skills/treatment-plans ~/.claude/skills/
@@ -67,6 +73,9 @@ Happycapy-skills/
 ├── README.md
 ├── LICENSE
 └── skills/
+    ├── happycapy-skill-creator/
+    │   ├── SKILL.md
+    │   └── README.md
     ├── reddit-post-writer/
     │   ├── SKILL.md
     │   ├── references/
