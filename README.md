@@ -1,30 +1,24 @@
 # Happycapy Skills
 
-A curated collection of high-quality Claude Code skills to enhance your development workflow. Skills are organized by category for easy discovery.
+A curated collection of high-quality Claude Code skills to enhance your development workflow.
 
-## 📚 Browse by Category
+## About This Repository
 
-### 🎨 Content Creation
-Skills for creating engaging content across different platforms.
+This repository contains carefully selected skills that demonstrate best practices and powerful capabilities with Claude's skills system. Each skill is designed to be production-ready, well-documented, and easy to integrate into your workflow.
 
-- **[Reddit Post Writer](content-creation/reddit-post-writer/)** - Generate authentic Reddit posts that sound human, avoid AI detection, and spark engagement across 25+ subreddits. Includes 7-persona committee review system and subreddit-specific guidelines. ([Original](https://github.com/niveshdandyan/reddit-post-skill))
+Browse through these skills to find tools for content creation, presentation design, development workflows, and more. Each skill is self-contained in its own folder with a `SKILL.md` file containing the instructions and metadata that Claude uses.
 
-### 📊 Presentation
-Skills for creating stunning presentations and visual content.
+## Skills
 
-- **[Frontend Slides](presentation/frontend-slides/)** - Create animation-rich HTML presentations from scratch or convert PowerPoint files. Zero dependencies, 12 distinctive design presets, responsive and viewport-fitted. ([Original](https://github.com/zarazhangrui/frontend-slides))
+### [reddit-post-writer](./skills/reddit-post-writer/)
+Generate authentic Reddit posts that sound human, avoid AI detection, and spark engagement across 25+ subreddits. Includes 7-persona committee review system and subreddit-specific guidelines for different communities.
 
-### 💻 Development
-_Coming soon - Skills for code generation, debugging, and development workflows._
+**Original Source:** [niveshdandyan/reddit-post-skill](https://github.com/niveshdandyan/reddit-post-skill)
 
-### ⚡ Productivity
-_Coming soon - Skills for automation, task management, and efficiency._
+### [frontend-slides](./skills/frontend-slides/)
+Create stunning, animation-rich HTML presentations from scratch or convert PowerPoint files to web format. Zero dependencies, 12 distinctive design presets, fully responsive and viewport-fitted. Perfect for pitch decks, conference talks, and teaching.
 
-### 📈 Data Analysis
-_Coming soon - Skills for data processing, visualization, and insights._
-
-### 🎨 Design
-_Coming soon - Skills for UI/UX design, graphics, and visual assets._
+**Original Source:** [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides)
 
 ---
 
@@ -39,63 +33,103 @@ Clone this repository and install individual skills:
 git clone https://github.com/trickleai/Happycapy-skills.git
 cd Happycapy-skills
 
-# Install a specific skill (example: Reddit Post Writer)
+# Install a specific skill
 mkdir -p ~/.claude/skills
-cp -r content-creation/reddit-post-writer ~/.claude/skills/
+cp -r skills/reddit-post-writer ~/.claude/skills/
+cp -r skills/frontend-slides ~/.claude/skills/
 
-# Or install Frontend Slides
-cp -r presentation/frontend-slides ~/.claude/skills/
-
-# Or install all skills from a category
-cp -r content-creation/* ~/.claude/skills/
+# Or install all skills at once
+cp -r skills/* ~/.claude/skills/
 ```
 
 ### Repository Structure
 
 ```
 Happycapy-skills/
-├── content-creation/       # Content creation skills
-│   └── reddit-post-writer/
-├── presentation/          # Presentation skills
-│   └── frontend-slides/
-├── development/           # Development tools (coming soon)
-├── productivity/          # Productivity tools (coming soon)
-├── data-analysis/         # Data analysis (coming soon)
-└── design/               # Design tools (coming soon)
+├── README.md
+├── LICENSE
+└── skills/
+    ├── reddit-post-writer/
+    │   ├── SKILL.md
+    │   ├── references/
+    │   └── LICENSE
+    └── frontend-slides/
+        ├── SKILL.md
+        ├── STYLE_PRESETS.md
+        └── LICENSE
 ```
 
-Each skill follows the standard Claude Code skill structure with its own SKILL.md and reference materials.
+Each skill follows the standard Claude Code skill structure with a `SKILL.md` file and any necessary reference materials.
 
 ---
 
-## About This Collection
+## Creating a Custom Skill
 
-Happycapy Skills is a curated collection of the best Claude Code skills for developers, content creators, and professionals. Each skill is:
-- Thoroughly tested and production-ready
-- Well-documented with examples
-- Actively maintained and updated
-- Designed to integrate seamlessly with Claude Code
+Skills are simple to create - just a folder with a `SKILL.md` file containing YAML frontmatter and instructions:
+
+```markdown
+---
+name: my-skill-name
+description: A clear description of what this skill does and when to use it
+---
+
+# My Skill Name
+
+[Add your instructions here that Claude will follow when this skill is active]
+
+## Examples
+- Example usage 1
+- Example usage 2
+
+## Guidelines
+- Guideline 1
+- Guideline 2
+```
+
+The frontmatter requires:
+- `name` - A unique identifier for your skill (lowercase, hyphens for spaces)
+- `description` - A complete description of what the skill does and when to use it
+
+For more details, see [How to create custom skills](https://support.claude.com/en/articles/12512198-creating-custom-skills).
+
+---
 
 ## Contributing
 
 We welcome contributions! If you have a skill you'd like to add to this collection:
-1. Fork this repository
-2. Add your skill in a dedicated folder
-3. Include comprehensive documentation
-4. Submit a pull request
 
-Please ensure your skill follows Claude Code best practices and includes:
-- Clear SKILL.md file
-- Usage examples
-- Any necessary reference materials
-- License information
+1. Fork this repository
+2. Create a new folder under `skills/` with your skill name
+3. Add a `SKILL.md` file with proper frontmatter and instructions
+4. Include any necessary reference materials
+5. Add a LICENSE file if different from the repository license
+6. Update this README to list your skill
+7. Submit a pull request
+
+Please ensure your skill:
+- Has a clear, descriptive name
+- Includes comprehensive documentation
+- Follows Claude Code best practices
+- Works reliably and is production-ready
+- Includes proper attribution if derived from other work
+
+---
 
 ## License
 
 Each skill in this collection maintains its original license. Please refer to individual skill directories for specific license information.
+
+The repository itself is licensed under MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
 **Repository:** [github.com/trickleai/Happycapy-skills](https://github.com/trickleai/Happycapy-skills)
 
 **Maintained by:** [Trickle AI](https://github.com/trickleai)
+
+## Related Resources
+
+- [What are skills?](https://support.claude.com/en/articles/12512176-what-are-skills)
+- [Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude)
+- [Agent Skills Standard](http://agentskills.io)
+- [Anthropic's Official Skills Repository](https://github.com/anthropics/skills)
