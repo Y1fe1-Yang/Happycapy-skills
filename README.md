@@ -30,6 +30,11 @@ Query Google Places API (New) via the goplaces CLI for text search, place detail
 
 **Original Source:** [steipete/goplaces](https://github.com/steipete/goplaces) via [openclaw/skills](https://github.com/openclaw/skills/tree/main/skills/steipete/goplaces)
 
+### [xiaohongshu-recruiter](./skills/xiaohongshu-recruiter/)
+用于在小红书上发布高质量的 AI 相关岗位招聘帖子。包含自动生成极客风格的招聘封面图和详情图，并提供自动化发布脚本。采用 Systemic Flux 设计理念，支持一键发布工作流程。
+
+**Original Source:** [iOfficeAI/AionUi](https://github.com/iOfficeAI/AionUi/tree/main/skills/xiaohongshu-recruiter)
+
 ---
 
 ## Installation
@@ -49,6 +54,7 @@ cp -r skills/reddit-post-writer ~/.claude/skills/
 cp -r skills/frontend-slides ~/.claude/skills/
 cp -r skills/treatment-plans ~/.claude/skills/
 cp -r skills/goplaces ~/.claude/skills/
+cp -r skills/xiaohongshu-recruiter ~/.claude/skills/
 
 # Or install all skills at once
 cp -r skills/* ~/.claude/skills/
@@ -75,9 +81,15 @@ Happycapy-skills/
     │   ├── assets/
     │   ├── scripts/
     │   └── references/
-    └── goplaces/
+    ├── goplaces/
+    │   ├── SKILL.md
+    │   └── README.md
+    └── xiaohongshu-recruiter/
         ├── SKILL.md
-        └── README.md
+        ├── README.md
+        ├── assets/
+        ├── scripts/
+        └── references/
 ```
 
 Each skill follows the standard Claude Code skill structure with a `SKILL.md` file and any necessary reference materials.
