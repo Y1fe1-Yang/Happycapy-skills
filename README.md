@@ -55,6 +55,11 @@ Create beautiful visual art in PNG and PDF documents using design philosophy. Us
 
 **Original Source:** [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills/canvas-design)
 
+### [slack-gif-creator](./skills/slack-gif-creator/)
+A toolkit for creating animated GIFs optimized for Slack. Provides composable animation primitives, validators for Slack requirements, and utilities for creating custom emoji GIFs (128x128, under 64KB) and message GIFs (480x480, under 2MB). Includes easing functions, frame helpers, and support for animations like shake, pulse, bounce, spin, fade, and more. Draw graphics from scratch using PIL primitives.
+
+**Original Source:** [anthropics/skills - slack-gif-creator](https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator)
+
 ---
 
 ## Installation
@@ -79,6 +84,7 @@ cp -r skills/xiaohongshu-recruiter ~/.claude/skills/
 cp -r skills/youtube-music ~/.claude/skills/
 cp -r skills/nano-banana-pro ~/.claude/skills/
 cp -r skills/canvas-design ~/.claude/skills/
+cp -r skills/slack-gif-creator ~/.claude/skills/
 
 # Or install all skills at once
 cp -r skills/* ~/.claude/skills/
@@ -125,9 +131,19 @@ Happycapy-skills/
     │   ├── README.md
     │   └── scripts/
     │       └── generate_image.py
-    └── canvas-design/
+    ├── canvas-design/
+    │   ├── SKILL.md
+    │   └── README.md
+    └── slack-gif-creator/
         ├── SKILL.md
-        └── README.md
+        ├── README.md
+        ├── LICENSE.txt
+        ├── requirements.txt
+        └── core/
+            ├── easing.py
+            ├── frame_composer.py
+            ├── gif_builder.py
+            └── validators.py
 ```
 
 Each skill follows the standard Claude Code skill structure with a `SKILL.md` file and any necessary reference materials.
