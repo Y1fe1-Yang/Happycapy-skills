@@ -80,6 +80,11 @@ Use when writing prose humans will read—documentation, commit messages, error 
 
 **Original Source:** [NeverSight/skills_feed - yanquankun/redbook-creator-publish](https://github.com/NeverSight/skills_feed/tree/main/data/skills-md/yanquankun/redbook-creator-publish/redbook-creator-publish)
 
+### [skill-creator](./skills/skill-creator/)
+Guide for creating effective skills. Use when designing, structuring, or packaging skills with scripts, references, and assets. Includes helper scripts for initializing, validating, and packaging skills. Provides comprehensive guidance on skill architecture, progressive disclosure patterns, and best practices for token-efficient skill design. Features bundled scripts: init_skill.py (generate skill structure), package_skill.py (validate and package), and quick_validate.py (validation).
+
+**Original Source:** [openclaw/openclaw](https://github.com/openclaw/openclaw/tree/main/skills/skill-creator)
+
 ---
 
 ## Installation
@@ -109,6 +114,7 @@ cp -r skills/slack-gif-creator ~/.claude/skills/
 cp -r skills/data-storytelling ~/.claude/skills/
 cp -r skills/writing-clearly-and-concisely ~/.claude/skills/
 cp -r skills/redbook-creator-publish ~/.claude/skills/
+cp -r skills/skill-creator ~/.claude/skills/
 
 # Or install all skills at once
 cp -r skills/* ~/.claude/skills/
@@ -190,9 +196,17 @@ Happycapy-skills/
     │       ├── 03-elementary-principles-of-composition.md
     │       ├── 04-a-few-matters-of-form.md
     │       └── 05-words-and-expressions-commonly-misused.md
-    └── redbook-creator-publish/
+    ├── redbook-creator-publish/
+    │   ├── SKILL.md
+    │   └── README.md
+    └── skill-creator/
         ├── SKILL.md
-        └── README.md
+        ├── README.md
+        ├── license.txt
+        └── scripts/
+            ├── init_skill.py
+            ├── package_skill.py
+            └── quick_validate.py
 ```
 
 Each skill follows the standard Claude Code skill structure with a `SKILL.md` file and any necessary reference materials.
