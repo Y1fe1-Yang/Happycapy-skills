@@ -50,6 +50,11 @@ Improves the quality of images, especially screenshots, by enhancing resolution,
 
 **Original Source:** [ComposioHQ/awesome-claude-skills - image-enhancer](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/image-enhancer)
 
+### [video-downloader](./skills/video-downloader/)
+Downloads videos from YouTube and other platforms for offline viewing, editing, or archival. Handles various formats (MP4, WebM, audio-only) and quality options (480p to 4K). Supports batch downloads, playlists, and metadata preservation. Perfect for saving educational content, archiving important videos, or downloading your own content from platforms. Includes copyright and fair use guidelines.
+
+**Original Source:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/media/video-downloader)
+
 ### [xiaohongshu-recruiter](./skills/xiaohongshu-recruiter/)
 Publish high-quality AI job recruitment posts on Xiaohongshu (Little Red Book). Automatically generates geek-style recruitment cover images and detail images, with automated publishing scripts. Built with Systemic Flux design philosophy, supports one-click publishing workflow.
 
@@ -133,6 +138,7 @@ cp -r skills/treatment-plans ~/.claude/skills/
 cp -r skills/writing-clearly-and-concisely ~/.claude/skills/
 cp -r skills/goplaces ~/.claude/skills/
 cp -r skills/image-enhancer ~/.claude/skills/
+cp -r skills/video-downloader ~/.claude/skills/
 cp -r skills/xiaohongshu-recruiter ~/.claude/skills/
 cp -r skills/youtube-music ~/.claude/skills/
 cp -r skills/nano-banana-pro ~/.claude/skills/
@@ -191,6 +197,9 @@ Happycapy-skills/
     │   ├── SKILL.md
     │   └── README.md
     ├── image-enhancer/
+    │   ├── SKILL.md
+    │   └── README.md
+    ├── video-downloader/
     │   ├── SKILL.md
     │   └── README.md
     ├── xiaohongshu-recruiter/
