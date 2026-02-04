@@ -90,6 +90,11 @@ Guide for creating effective skills. Use when designing, structuring, or packagi
 
 **Original Source:** [openclaw/openclaw](https://github.com/openclaw/openclaw/tree/main/skills/skill-creator)
 
+### [mobile-design](./skills/mobile-design/)
+Mobile-first design thinking and decision-making for iOS and Android apps. Touch interaction, performance patterns, platform conventions. Teaches principles, not fixed values. Use when building React Native, Flutter, or native mobile apps. Includes comprehensive guidance on touch psychology, Fitts' Law, thumb zones, mobile performance optimization, platform-specific design patterns (iOS HIG & Material Design 3), navigation patterns, and framework selection. Features 13 detailed reference files, decision trees, and a mobile UX audit script.
+
+**Original Source:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/mobile-design)
+
 ---
 
 ## Installation
@@ -121,6 +126,7 @@ cp -r skills/data-storytelling ~/.claude/skills/
 cp -r skills/writing-clearly-and-concisely ~/.claude/skills/
 cp -r skills/redbook-creator-publish ~/.claude/skills/
 cp -r skills/skill-creator ~/.claude/skills/
+cp -r skills/mobile-design ~/.claude/skills/
 
 # Or install all skills at once
 cp -r skills/* ~/.claude/skills/
@@ -208,14 +214,31 @@ Happycapy-skills/
     ├── redbook-creator-publish/
     │   ├── SKILL.md
     │   └── README.md
-    └── skill-creator/
+    ├── skill-creator/
+    │   ├── SKILL.md
+    │   ├── README.md
+    │   ├── license.txt
+    │   └── scripts/
+    │       ├── init_skill.py
+    │       ├── package_skill.py
+    │       └── quick_validate.py
+    └── mobile-design/
         ├── SKILL.md
         ├── README.md
-        ├── license.txt
+        ├── decision-trees.md
+        ├── mobile-backend.md
+        ├── mobile-color-system.md
+        ├── mobile-debugging.md
+        ├── mobile-design-thinking.md
+        ├── mobile-navigation.md
+        ├── mobile-performance.md
+        ├── mobile-testing.md
+        ├── mobile-typography.md
+        ├── platform-android.md
+        ├── platform-ios.md
+        ├── touch-psychology.md
         └── scripts/
-            ├── init_skill.py
-            ├── package_skill.py
-            └── quick_validate.py
+            └── mobile_audit.py
 ```
 
 Each skill follows the standard Claude Code skill structure with a `SKILL.md` file and any necessary reference materials.
