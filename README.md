@@ -10,6 +10,11 @@ Browse through these skills to find tools for content creation, presentation des
 
 ## Skills
 
+### [3d-web-experience](./skills/3d-web-experience/)
+Expert in building 3D experiences for the web using Three.js, React Three Fiber, Spline, and WebGL. Covers product configurators, 3D portfolios, immersive websites, scroll-driven 3D interactions, and performance optimization. Includes guidance on 3D stack selection, model pipeline optimization, and mobile device support.
+
+**Original Source:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/3d-web-experience)
+
 ### [reddit-post-writer](./skills/reddit-post-writer/)
 Generate authentic Reddit posts that sound human, avoid AI detection, and spark engagement across 25+ subreddits. Includes 7-persona committee review system and subreddit-specific guidelines for different communities.
 
@@ -55,6 +60,7 @@ cd Happycapy-skills
 
 # Install a specific skill
 mkdir -p ~/.claude/skills
+cp -r skills/3d-web-experience ~/.claude/skills/
 cp -r skills/reddit-post-writer ~/.claude/skills/
 cp -r skills/frontend-slides ~/.claude/skills/
 cp -r skills/treatment-plans ~/.claude/skills/
@@ -73,6 +79,9 @@ Happycapy-skills/
 ├── README.md
 ├── LICENSE
 └── skills/
+    ├── 3d-web-experience/
+    │   ├── SKILL.md
+    │   └── README.md
     ├── reddit-post-writer/
     │   ├── SKILL.md
     │   ├── references/
