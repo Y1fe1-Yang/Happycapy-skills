@@ -30,6 +30,11 @@ Generate concise (3-4 page), focused medical treatment plans in LaTeX/PDF format
 
 **Original Source:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/treatment-plans)
 
+### [writing-clearly-and-concisely](./skills/writing-clearly-and-concisely/)
+Write with clarity and force using William Strunk Jr.'s timeless principles from The Elements of Style. Applies proven rules for clear, strong, professional writing while avoiding common AI writing patterns. Use when writing documentation, commit messages, error messages, reports, or any prose for human readers. Emphasizes active voice, concrete language, and cutting needless words.
+
+**Original Source:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/enterprise-communication/writing-clearly-and-concisely)
+
 ### [goplaces](./skills/goplaces/)
 Query Google Places API (New) via the goplaces CLI for text search, place details, resolve, and reviews. Modern CLI with human-friendly output by default and JSON format for scripting. Includes advanced filters like open now, minimum rating, location bias, and radius search.
 
@@ -84,6 +89,7 @@ cp -r skills/3d-web-experience ~/.claude/skills/
 cp -r skills/reddit-post-writer ~/.claude/skills/
 cp -r skills/frontend-slides ~/.claude/skills/
 cp -r skills/treatment-plans ~/.claude/skills/
+cp -r skills/writing-clearly-and-concisely ~/.claude/skills/
 cp -r skills/goplaces ~/.claude/skills/
 cp -r skills/xiaohongshu-recruiter ~/.claude/skills/
 cp -r skills/youtube-music ~/.claude/skills/
@@ -120,6 +126,16 @@ Happycapy-skills/
     │   ├── assets/
     │   ├── scripts/
     │   └── references/
+    ├── writing-clearly-and-concisely/
+    │   ├── SKILL.md
+    │   ├── README.md
+    │   ├── signs-of-ai-writing.md
+    │   └── elements-of-style/
+    │       ├── 01-introductory.md
+    │       ├── 02-elementary-rules-of-usage.md
+    │       ├── 03-elementary-principles-of-composition.md
+    │       ├── 04-a-few-matters-of-form.md
+    │       └── 05-words-and-expressions-commonly-misused.md
     ├── goplaces/
     │   ├── SKILL.md
     │   └── README.md
