@@ -115,6 +115,11 @@ AI-powered film creation assistant that transforms a single sentence or image in
 
 **Original Source:** [Y1fe1-Yang/film-creator-skill](https://github.com/Y1fe1-Yang/film-creator-skill)
 
+### [weather](./skills/weather/)
+Get current weather and forecasts using free services without requiring API keys. Uses wttr.in for rich terminal weather displays with ASCII art and Open-Meteo for JSON API responses. Supports multiple output formats (text, PNG images), cities, airport codes, and coordinates. Perfect for quick weather checks in the terminal or programmatic weather data access.
+
+**Original Source:** [openclaw/openclaw](https://github.com/openclaw/openclaw/tree/main/skills/weather)
+
 ---
 
 ## Installation
@@ -151,6 +156,7 @@ cp -r skills/skill-creator ~/.claude/skills/
 cp -r skills/mobile-design ~/.claude/skills/
 cp -r skills/resume-assistant ~/.claude/skills/
 cp -r skills/film-creator ~/.claude/skills/
+cp -r skills/weather ~/.claude/skills/
 
 # Or install all skills at once
 cp -r skills/* ~/.claude/skills/
@@ -266,7 +272,10 @@ Happycapy-skills/
     ├── resume-assistant/
     │   ├── SKILL.md
     │   └── README.md
-    └── film-creator/
+    ├── film-creator/
+    │   ├── SKILL.md
+    │   └── README.md
+    └── weather/
         ├── SKILL.md
         └── README.md
 ```
