@@ -45,6 +45,11 @@ Query Google Places API (New) via the goplaces CLI for text search, place detail
 
 **Original Source:** [steipete/goplaces](https://github.com/steipete/goplaces) via [openclaw/skills](https://github.com/openclaw/skills/tree/main/skills/steipete/goplaces)
 
+### [image-enhancer](./skills/image-enhancer/)
+Improves the quality of images, especially screenshots, by enhancing resolution, sharpness, and clarity. Perfect for preparing images for presentations, documentation, or social media posts. Analyzes image quality, enhances resolution, improves sharpness, reduces artifacts, and optimizes for different use cases. Supports batch processing and keeps original files as backup.
+
+**Original Source:** [ComposioHQ/awesome-claude-skills - image-enhancer](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/image-enhancer)
+
 ### [xiaohongshu-recruiter](./skills/xiaohongshu-recruiter/)
 用于在小红书上发布高质量的 AI 相关岗位招聘帖子。包含自动生成极客风格的招聘封面图和详情图，并提供自动化发布脚本。采用 Systemic Flux 设计理念，支持一键发布工作流程。
 
@@ -127,6 +132,7 @@ cp -r skills/frontend-slides ~/.claude/skills/
 cp -r skills/treatment-plans ~/.claude/skills/
 cp -r skills/writing-clearly-and-concisely ~/.claude/skills/
 cp -r skills/goplaces ~/.claude/skills/
+cp -r skills/image-enhancer ~/.claude/skills/
 cp -r skills/xiaohongshu-recruiter ~/.claude/skills/
 cp -r skills/youtube-music ~/.claude/skills/
 cp -r skills/nano-banana-pro ~/.claude/skills/
@@ -182,6 +188,9 @@ Happycapy-skills/
     │       ├── 04-a-few-matters-of-form.md
     │       └── 05-words-and-expressions-commonly-misused.md
     ├── goplaces/
+    │   ├── SKILL.md
+    │   └── README.md
+    ├── image-enhancer/
     │   ├── SKILL.md
     │   └── README.md
     ├── xiaohongshu-recruiter/
