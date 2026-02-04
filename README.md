@@ -45,6 +45,11 @@ Query Google Places API (New) via the goplaces CLI for text search, place detail
 
 **Original Source:** [Y1fe1-Yang/resume-assistant-skill](https://github.com/Y1fe1-Yang/resume-assistant-skill)
 
+### [film-creator](./skills/film-creator/)
+AI-powered film creation assistant that transforms a single sentence or image into a complete 30-second cinematic film. Automatically generates professional screenplay with 5-scene structure, creates high-quality video for each scene using AI models (Google Veo, OpenAI Sora, BytePlus Seedance), and assembles them into a polished film with FFmpeg. Perfect for social media content, marketing videos, and rapid film prototyping.
+
+**Original Source:** [Y1fe1-Yang/film-creator-skill](https://github.com/Y1fe1-Yang/film-creator-skill)
+
 ---
 
 ## Installation
@@ -67,6 +72,7 @@ cp -r skills/treatment-plans ~/.claude/skills/
 cp -r skills/goplaces ~/.claude/skills/
 cp -r skills/xiaohongshu-recruiter ~/.claude/skills/
 cp -r skills/resume-assistant ~/.claude/skills/
+cp -r skills/film-creator ~/.claude/skills/
 
 # Or install all skills at once
 cp -r skills/* ~/.claude/skills/
@@ -105,7 +111,10 @@ Happycapy-skills/
     │   ├── assets/
     │   ├── scripts/
     │   └── references/
-    └── resume-assistant/
+    ├── resume-assistant/
+    │   ├── SKILL.md
+    │   └── README.md
+    └── film-creator/
         ├── SKILL.md
         └── README.md
 ```
