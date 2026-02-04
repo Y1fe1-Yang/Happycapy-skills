@@ -40,6 +40,11 @@ Query Google Places API (New) via the goplaces CLI for text search, place detail
 
 **Original Source:** [iOfficeAI/AionUi](https://github.com/iOfficeAI/AionUi/tree/main/skills/xiaohongshu-recruiter)
 
+### [resume-assistant](./skills/resume-assistant/)
+智能简历助手，通过五个专业 AI 代理提供全流程求职支持：(1) 故事挖掘 - 发现经历亮点；(2) 职位推荐 - 匹配合适岗位；(3) 简历优化 - 针对 JD 定制内容；(4) 模拟面试 - 实战演练与反馈；(5) 能力提升 - 差距分析与计划。支持 PDF/DOCX/HTML/Excel 多格式输出，内置中文字体，开箱即用。
+
+**Original Source:** [Y1fe1-Yang/resume-assistant-skill](https://github.com/Y1fe1-Yang/resume-assistant-skill)
+
 ---
 
 ## Installation
@@ -61,6 +66,7 @@ cp -r skills/frontend-slides ~/.claude/skills/
 cp -r skills/treatment-plans ~/.claude/skills/
 cp -r skills/goplaces ~/.claude/skills/
 cp -r skills/xiaohongshu-recruiter ~/.claude/skills/
+cp -r skills/resume-assistant ~/.claude/skills/
 
 # Or install all skills at once
 cp -r skills/* ~/.claude/skills/
@@ -93,12 +99,15 @@ Happycapy-skills/
     ├── goplaces/
     │   ├── SKILL.md
     │   └── README.md
-    └── xiaohongshu-recruiter/
+    ├── xiaohongshu-recruiter/
+    │   ├── SKILL.md
+    │   ├── README.md
+    │   ├── assets/
+    │   ├── scripts/
+    │   └── references/
+    └── resume-assistant/
         ├── SKILL.md
-        ├── README.md
-        ├── assets/
-        ├── scripts/
-        └── references/
+        └── README.md
 ```
 
 Each skill follows the standard Claude Code skill structure with a `SKILL.md` file and any necessary reference materials.
