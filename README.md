@@ -35,6 +35,11 @@ Query Google Places API (New) via the goplaces CLI for text search, place detail
 
 **Original Source:** [iOfficeAI/AionUi](https://github.com/iOfficeAI/AionUi/tree/main/skills/xiaohongshu-recruiter)
 
+### [youtube-music](./skills/youtube-music/)
+Search and play music tracks on YouTube Music through MCP integration. Enables AI assistants to search for songs by title or artist name and play them directly in your default web browser. Requires a Google YouTube API key for operation.
+
+**Original Source:** [instructa/mcp-youtube-music](https://github.com/instructa/mcp-youtube-music)
+
 ---
 
 ## Installation
@@ -55,6 +60,7 @@ cp -r skills/frontend-slides ~/.claude/skills/
 cp -r skills/treatment-plans ~/.claude/skills/
 cp -r skills/goplaces ~/.claude/skills/
 cp -r skills/xiaohongshu-recruiter ~/.claude/skills/
+cp -r skills/youtube-music ~/.claude/skills/
 
 # Or install all skills at once
 cp -r skills/* ~/.claude/skills/
@@ -84,12 +90,15 @@ Happycapy-skills/
     ├── goplaces/
     │   ├── SKILL.md
     │   └── README.md
-    └── xiaohongshu-recruiter/
+    ├── xiaohongshu-recruiter/
+    │   ├── SKILL.md
+    │   ├── README.md
+    │   ├── assets/
+    │   ├── scripts/
+    │   └── references/
+    └── youtube-music/
         ├── SKILL.md
-        ├── README.md
-        ├── assets/
-        ├── scripts/
-        └── references/
+        └── README.md
 ```
 
 Each skill follows the standard Claude Code skill structure with a `SKILL.md` file and any necessary reference materials.
