@@ -70,6 +70,11 @@ Transform data into compelling narratives using visualization, context, and pers
 
 **Original Source:** [wshobson/agents](https://github.com/wshobson/agents/tree/main/plugins/business-analytics/skills/data-storytelling)
 
+### [writing-clearly-and-concisely](./skills/writing-clearly-and-concisely/)
+Use when writing prose humans will read—documentation, commit messages, error messages, explanations, reports, or UI text. Applies Strunk's timeless rules for clearer, stronger, more professional writing. Includes comprehensive guidelines from "The Elements of Style" covering grammar, composition, active voice, concision, and avoiding common AI writing patterns.
+
+**Original Source:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/enterprise-communication/writing-clearly-and-concisely)
+
 ---
 
 ## Installation
@@ -97,6 +102,7 @@ cp -r skills/nano-banana-pro ~/.claude/skills/
 cp -r skills/canvas-design ~/.claude/skills/
 cp -r skills/slack-gif-creator ~/.claude/skills/
 cp -r skills/data-storytelling ~/.claude/skills/
+cp -r skills/writing-clearly-and-concisely ~/.claude/skills/
 
 # Or install all skills at once
 cp -r skills/* ~/.claude/skills/
@@ -166,9 +172,18 @@ Happycapy-skills/
     │       ├── frame_composer.py
     │       ├── gif_builder.py
     │       └── validators.py
-    └── data-storytelling/
+    ├── data-storytelling/
+    │   ├── SKILL.md
+    │   └── README.md
+    └── writing-clearly-and-concisely/
         ├── SKILL.md
-        └── README.md
+        ├── README.md
+        └── elements-of-style/
+            ├── 01-introductory.md
+            ├── 02-elementary-rules-of-usage.md
+            ├── 03-elementary-principles-of-composition.md
+            ├── 04-a-few-matters-of-form.md
+            └── 05-words-and-expressions-commonly-misused.md
 ```
 
 Each skill follows the standard Claude Code skill structure with a `SKILL.md` file and any necessary reference materials.
