@@ -1,142 +1,142 @@
-# Xiaohongshu Recruiter (小红书招聘助手)
+# Xiaohongshu Recruiter
 
-用于在小红书上发布高质量的 AI 相关岗位招聘帖子，包含自动生成极客风格的招聘封面图和详情图，并提供自动化发布脚本。
+For posting high-quality AI-related job recruitment posts on Xiaohongshu, including automatic generation of geek-style recruitment cover and detail images, with automated publishing scripts.
 
-## 功能概述
+## Features Overview
 
-本技能旨在帮助用户快速、专业地在小红书发布 AI 岗位的招聘信息。通过 "Systemic Flux" 设计理念生成符合极客审美的视觉素材，并提供 Playwright 脚本实现半自动化发布。
+This skill helps users quickly and professionally publish AI job recruitment information on Xiaohongshu. It generates visual materials that match geek aesthetics through the "Systemic Flux" design philosophy and provides Playwright scripts for semi-automated publishing.
 
-## 使用场景
+## Use Cases
 
-- 发布 AI 相关岗位招聘信息
-- 寻找 Agent 设计师
-- 招聘其他 AI 领域人才
-- 创建高质量的小红书招聘帖子
+- Post AI-related job recruitment information
+- Find Agent designers
+- Recruit other AI talent
+- Create high-quality Xiaohongshu recruitment posts
 
-## 核心工作流
+## Core Workflow
 
-### 简化模式（默认）
+### Simplified Mode (Default)
 
-当用户仅给出一句话指令（如"发布一个前端开发工程师的招聘信息到小红书"）时：
+When the user provides only a one-sentence instruction (e.g., "Post a frontend developer recruitment to Xiaohongshu"):
 
-1. 模型自行补全招聘信息与文案
-2. 自动补充默认投递方式（私信联系/评论联系）
-3. 自动生成封面图与详情图
-4. 自动打开浏览器，等待用户扫码登录
-5. 自动填写图文信息并一键发布
+1. Model automatically completes recruitment information and copy
+2. Automatically adds default submission method (DM contact/comment contact)
+3. Automatically generates cover image and detail image
+4. Automatically opens browser, waiting for user to scan QR code to login
+5. Automatically fills in image-text information and publishes with one click
 
-### 完整工作流程
+### Complete Workflow
 
-#### 1. 信息收集
+#### 1. Information Collection
 
-收集以下关键信息（仅在用户明确要求或关键信息冲突时询问）：
+Collect the following key information (only ask when user explicitly requests or key information conflicts):
 
-- **岗位名称**（如：Agent Designer）
-- **核心职责 & 要求**
-- **投递邮箱**
+- **Job Title** (e.g., Agent Designer)
+- **Core Responsibilities & Requirements**
+- **Application Email**
 
-#### 2. 生成视觉素材
+#### 2. Generate Visual Materials
 
-使用本地脚本生成极客风格的招聘图片：
+Use local script to generate geek-style recruitment images:
 
 ```bash
 node scripts/generate_images.js
 ```
 
-**产出文件**：
-- `cover.png` - 封面图
-- `jd_details.png` - 详情图
+**Output Files**:
+- `cover.png` - Cover image
+- `jd_details.png` - Detail image
 
-#### 3. 生成文案
+#### 3. Generate Copy
 
-生成符合小红书调性的文案，保存为 `post_content.txt`。
+Generate copy that matches Xiaohongshu tone, save as `post_content.txt`.
 
-**文案规则**：
-- 标题：少于 20 字
-- 正文：包含话题标签
-- 详细规则参考 `assets/rules.md`
+**Copy Rules**:
+- Title: Less than 20 characters
+- Body: Include topic tags
+- Detailed rules refer to `assets/rules.md`
 
-#### 4. 自动化发布
+#### 4. Automated Publishing
 
-使用 Playwright 脚本自动发布到小红书。
+Use Playwright script to automatically publish to Xiaohongshu.
 
-**前置要求**：
+**Prerequisites**:
 
 ```bash
-# 安装 Playwright
+# Install Playwright
 pip install playwright
 
-# 安装浏览器驱动
+# Install browser driver
 playwright install chromium
 ```
 
-**执行发布**：
+**Execute Publishing**:
 
 ```bash
-python3 scripts/publish_xiaohongshu.py "你的标题" "post_content.txt" "cover.png" "jd_details.png"
+python3 scripts/publish_xiaohongshu.py "Your Title" "post_content.txt" "cover.png" "jd_details.png"
 ```
 
-**交互流程**：
+**Interaction Flow**:
 
-1. 脚本打开小红书创作者中心
-2. 若出现登录页，扫码登录
-3. 登录完成后，脚本自动：
-   - 上传图片
-   - 填写标题与正文
-   - 点击"发布"
-4. 浏览器保持打开供用户确认
+1. Script opens Xiaohongshu creator center
+2. If login page appears, scan QR code to login
+3. After login completion, script automatically:
+   - Uploads images
+   - Fills in title and body
+   - Clicks "Publish"
+4. Browser stays open for user confirmation
 
-## 资源文件
+## Resource Files
 
-### Assets（设计资源）
+### Assets (Design Resources)
 
-- **assets/design_philosophy.md** - 视觉设计哲学（Systemic Flux 设计理念）
-- **assets/rules.md** - 详细的操作规范和平台限制
+- **assets/design_philosophy.md** - Visual design philosophy (Systemic Flux design concept)
+- **assets/rules.md** - Detailed operation specifications and platform restrictions
 
-### Scripts（脚本工具）
+### Scripts (Script Tools)
 
-- **scripts/generate_images.js** - 图片生成脚本
-- **scripts/publish_xiaohongshu.py** - 发布自动化脚本
+- **scripts/generate_images.js** - Image generation script
+- **scripts/publish_xiaohongshu.py** - Publishing automation script
 
-### References（参考文档）
+### References (Reference Documentation)
 
-包含额外的参考资料和指南
+Contains additional reference materials and guidelines
 
-## 设计理念
+## Design Philosophy
 
-采用 "Systemic Flux" 设计风格：
-- 极客审美
-- 科技感视觉
-- 符合 AI 领域特色
-- 专业且现代
+Adopts "Systemic Flux" design style:
+- Geek aesthetics
+- Tech-sense visuals
+- Matches AI field characteristics
+- Professional and modern
 
-## 技术要求
+## Technical Requirements
 
-- Node.js（用于图片生成）
+- Node.js (for image generation)
 - Python 3.x
-- Playwright 浏览器自动化库
-- Chromium 浏览器驱动
+- Playwright browser automation library
+- Chromium browser driver
 
-## 注意事项
+## Notes
 
-1. 首次使用需要扫码登录小红书账号
-2. 确保网络连接稳定
-3. 遵守小红书平台发布规则
-4. 图片和文案需符合平台内容规范
+1. First use requires scanning QR code to login to Xiaohongshu account
+2. Ensure stable network connection
+3. Follow Xiaohongshu platform publishing rules
+4. Images and copy must comply with platform content standards
 
-## 使用示例
+## Usage Example
 
-简单的一句话指令：
+Simple one-sentence instruction:
 
 ```
-发布一个 Agent Designer 的招聘信息到小红书
+Post an Agent Designer recruitment to Xiaohongshu
 ```
 
-Claude 将自动：
-- 生成招聘岗位描述
-- 创建封面图和详情图
-- 编写小红书文案
-- 启动自动发布流程
+Claude will automatically:
+- Generate job description
+- Create cover and detail images
+- Write Xiaohongshu copy
+- Start automated publishing process
 
 ## Links
 
@@ -145,4 +145,4 @@ Claude 将自动：
 
 ## License
 
-请参考原始仓库的许可证信息。
+Please refer to the original repository for license information.

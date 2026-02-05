@@ -1,127 +1,127 @@
-# Redbook Creator Publish (小红书帖子创作与发布)
+# Redbook Creator Publish (Xiaohongshu Post Creation & Publishing)
 
-小红书帖子创作与发布技能，自动生成优质小红书内容并发布到创作者平台。
+Xiaohongshu post creation and publishing skill that automatically generates high-quality content and publishes to the creator platform.
 
-## 功能概述
+## Features Overview
 
-本技能帮助用户创作小红书风格的优质内容，包括标题、正文、标签、配图，并默认自动上传到小红书创作者平台。
+This skill helps users create Xiaohongshu-style quality content, including titles, body text, tags, and images, with automatic upload to the Xiaohongshu creator platform by default.
 
-## 主要功能
+## Main Features
 
-1. **内容生成** - 生成小红书风格的帖子内容（标题+正文+标签）
-2. **配图生成** - 自动生成帖子相关的配图（PNG/JPG格式，9:16竖版比例）
-3. **自动上传** - 默认自动上传到小红书创作者平台（使用Playwright浏览器自动化）
-4. **本地预览** - 生成本地预览HTML文件和Markdown文件
-5. **智能降级** - 自动上传失败时自动提供详细手动上传指引
+1. **Content Generation** - Generate Xiaohongshu-style post content (title + body + tags)
+2. **Image Generation** - Automatically generate post-related images (PNG/JPG format, 9:16 vertical ratio)
+3. **Auto Upload** - Automatic upload to Xiaohongshu creator platform by default (using Playwright browser automation)
+4. **Local Preview** - Generate local preview HTML and Markdown files
+5. **Smart Fallback** - Automatically provides detailed manual upload instructions when auto-upload fails
 
-## 使用场景
+## Use Cases
 
-- 创作小红书风格的帖子内容
-- 快速生成小红书配图
-- 自动发布内容到小红书创作者平台
-- 分享产品、工具、技巧、教程等内容
+- Create Xiaohongshu-style post content
+- Quickly generate Xiaohongshu cover images
+- Automatically publish content to Xiaohongshu creator platform
+- Share products, tools, tips, tutorials, etc.
 
-## 触发词
+## Trigger Words
 
-- 小红书创作
+- create xiaohongshu post
 - create redbook
-- 小红书
-- 红书
-- 笔记创作
-- 帖子创作
+- xiaohongshu
+- redbook
+- note creation
+- post creation
 
-## 核心特性
+## Core Features
 
-### v3.0 更新
+### v3.0 Updates
 
-- **Python实现** - 使用Playwright for Python实现浏览器自动化
-- **默认自动上传** - 无需询问用户，直接执行自动上传
-- **智能降级** - 自动上传失败时自动提供详细手动上传指引
-- **PNG/JPG配图** - 配图改为PNG/JPG格式（不再使用HTML）
-- **图片预览** - 预览HTML和MD文档支持显示图片
-- **Playwright自动化** - 使用Playwright浏览器自动化（比Selenium更快更稳定）
-- **DOM选择器配置化** - 支持通过环境变量自定义选择器
-- **话题深度搜索** - 深度搜索功能确保内容准确性和时效性
+- **Python Implementation** - Browser automation implemented with Playwright for Python
+- **Auto Upload by Default** - No need to ask user, executes auto-upload directly
+- **Smart Fallback** - Automatically provides detailed manual upload instructions when auto-upload fails
+- **PNG/JPG Images** - Images changed to PNG/JPG format (no longer using HTML)
+- **Image Preview** - Preview HTML and MD documents support image display
+- **Playwright Automation** - Uses Playwright browser automation (faster and more stable than Selenium)
+- **Configurable DOM Selectors** - Support custom selectors via environment variables
+- **Deep Topic Search** - Deep search functionality ensures content accuracy and timeliness
 
-## 前置要求
+## Prerequisites
 
-- **Python 3.0+** - 必需
-- **Playwright** - 首次使用自动安装
-- **Chrome浏览器** - 用于HTML转图片（可选）
+- **Python 3.0+** - Required
+- **Playwright** - Automatically installed on first use
+- **Chrome Browser** - For HTML to image conversion (optional)
 
-## 工作流程
+## Workflow
 
-1. **确定创作主题** - 提供主题或自动搜索热门AI资讯
-2. **深度搜索** - 使用WebSearch工具搜索相关内容，确保准确性
-3. **生成帖子内容** - 生成标题、正文（300-500字）、标签
-4. **生成配图** - 生成1张9:16竖版主图（1080x1920px）
-5. **生成本地文件** - 创建HTML预览、Markdown文档、纯文本、配图文件
-6. **自动上传** - 使用Playwright自动上传到小红书（首次需登录）
+1. **Determine Creation Topic** - Provide topic or automatically search popular AI news
+2. **Deep Search** - Use WebSearch tool to search related content, ensure accuracy
+3. **Generate Post Content** - Generate title, body (300-500 words), tags
+4. **Generate Images** - Generate 1 vertical 9:16 cover image (1080x1920px)
+5. **Generate Local Files** - Create HTML preview, Markdown document, plain text, image files
+6. **Auto Upload** - Automatically upload to Xiaohongshu using Playwright (requires login on first use)
 
-## 内容规范
+## Content Specifications
 
-### 标题要求
-- 不超过20个字
-- 可使用1-2个emoji
-- 包含钩子元素（数字型、疑问型、利益型、悬念型、共鸣型）
+### Title Requirements
+- No more than 20 characters
+- Can use 1-2 emojis
+- Include hook elements (numeric, question, benefit, suspense, resonance)
 
-### 正文要求
-- 字数：300-500字
-- 使用中文（技术专有名词可保留英文）
-- 结构：开头钩子 → 核心内容 → 总结/互动
-- 基于深度搜索结果整合最新信息和案例
+### Body Requirements
+- Word count: 300-500 words
+- Use Chinese (technical terms can retain English)
+- Structure: Opening hook → Core content → Summary/Interaction
+- Integrate latest information and cases based on deep search results
 
-### 配图要求
-- 数量：1张主图
-- 格式：PNG或JPG
-- 尺寸：1080x1920px（9:16竖版比例）
-- 风格：自然、真实，减少AI感
-- 文字：必须使用中文，无乱码
+### Image Requirements
+- Quantity: 1 main image
+- Format: PNG or JPG
+- Size: 1080x1920px (9:16 vertical ratio)
+- Style: Natural, realistic, reduce AI feel
+- Text: Must use Chinese, no garbled text
 
-## 设计风格
+## Design Styles
 
-支持多种设计风格，根据内容自行选择：
+Supports multiple design styles, choose based on content:
 
-1. **Newsprint报纸风格** - 高对比度排版，适合专业内容
-2. **现代简约风格** - 大量留白，适合轻松内容
-3. **杂志封面风格** - 醒目视觉，适合推荐盘点
-4. **卡片堆叠风格** - 清晰层次，适合教程步骤
+1. **Newsprint Style** - High contrast layout, suitable for professional content
+2. **Modern Minimalist Style** - Plenty of white space, suitable for light content
+3. **Magazine Cover Style** - Eye-catching visuals, suitable for recommendations and lists
+4. **Card Stack Style** - Clear hierarchy, suitable for tutorial steps
 
-## 自动上传
+## Auto Upload
 
-- **默认执行** - 无需询问用户，直接自动上传
-- **Playwright驱动** - 使用Playwright for Python实现
-- **登录状态持久化** - 首次登录后记住状态
-- **智能错误处理** - 失败时提供详细手动指引
-- **DOM选择器可配置** - 支持通过环境变量自定义
+- **Default Execution** - No need to ask user, directly auto-upload
+- **Playwright Driven** - Implemented with Playwright for Python
+- **Login Persistence** - Remembers state after first login
+- **Smart Error Handling** - Provides detailed manual instructions on failure
+- **Configurable DOM Selectors** - Support custom selectors via environment variables
 
-## 文件输出
+## File Output
 
-生成的文件结构：
+Generated file structure:
 
 ```
 redbook-article/
-└── [帖子主题]-[YYYY-MM-DD]/
-    ├── [帖子主题]-[YYYY-MM-DD].html      # 预览文件
-    ├── [帖子主题]-[YYYY-MM-DD].md        # Markdown格式
-    ├── [帖子主题]-[YYYY-MM-DD].txt       # 纯文本
+└── [post-topic]-[YYYY-MM-DD]/
+    ├── [post-topic]-[YYYY-MM-DD].html      # Preview file
+    ├── [post-topic]-[YYYY-MM-DD].md        # Markdown format
+    ├── [post-topic]-[YYYY-MM-DD].txt       # Plain text
     ├── images/
-    │   └── cover.png                      # 封面图
-    └── config.json                        # 配置信息
+    │   └── cover.png                       # Cover image
+    └── config.json                         # Configuration info
 ```
 
-## 注意事项
+## Notes
 
-- 所有生成内容必须原创，基于深度搜索结果整合
-- 正文字数必须在300-500字之间
-- 内容需符合小红书社区规范
-- 避免敏感词汇和违规内容
-- 图片文字使用中文，确保无乱码
-- 首次使用需要在自动打开的浏览器中登录小红书账号
+- All generated content must be original, integrated from deep search results
+- Body word count must be between 300-500 words
+- Content must comply with Xiaohongshu community guidelines
+- Avoid sensitive words and prohibited content
+- Image text uses Chinese, ensure no garbled text
+- First use requires login to Xiaohongshu account in the automatically opened browser
 
-## 相关资源
+## Related Resources
 
-- Playwright官方网站: https://playwright.dev/python/
-- 小红书创作者平台: https://creator.xiaohongshu.com/
+- Playwright Official Website: https://playwright.dev/python/
+- Xiaohongshu Creator Platform: https://creator.xiaohongshu.com/
 
 **Original Source:** [NeverSight/skills_feed - yanquankun/redbook-creator-publish](https://github.com/NeverSight/skills_feed/tree/main/data/skills-md/yanquankun/redbook-creator-publish/redbook-creator-publish)
