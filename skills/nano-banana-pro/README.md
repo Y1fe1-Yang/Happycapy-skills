@@ -12,7 +12,9 @@ Generate or edit images using Google's Gemini 3 Pro Image API (Nano Banana Pro).
 ## Requirements
 
 - `uv` package manager (install via Homebrew: `brew install uv`)
-- `GEMINI_API_KEY` environment variable with your Google API key
+- API Key (one of):
+  - `AI_GATEWAY_API_KEY` (recommended - uses Anthropic AI Gateway)
+  - `GEMINI_API_KEY` (direct Google Gemini API access)
 
 ## Usage
 
@@ -46,13 +48,22 @@ uv run ~/.claude/skills/nano-banana-pro/scripts/generate_image.py \
 
 ## Configuration
 
-Set your API key via environment variable:
+The skill supports multiple API key sources, checked in priority order:
 
+### Option 1: AI Gateway (Recommended)
 ```bash
-export GEMINI_API_KEY="your-api-key-here"
+export AI_GATEWAY_API_KEY="your-ai-gateway-key"
 ```
 
-Or configure it in OpenClaw's config file at `~/.openclaw/openclaw.json`:
+This routes requests through Anthropic's AI Gateway for unified management and cost efficiency.
+
+### Option 2: Direct Gemini API
+```bash
+export GEMINI_API_KEY="your-gemini-api-key"
+```
+
+### Option 3: OpenClaw Config File
+Configure in `~/.openclaw/openclaw.json`:
 
 ```json
 {

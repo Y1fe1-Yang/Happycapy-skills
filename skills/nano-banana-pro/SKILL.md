@@ -7,7 +7,7 @@ metadata:
     "openclaw":
       {
         "emoji": "🍌",
-        "requires": { "bins": ["uv"], "env": ["GEMINI_API_KEY"] },
+        "requires": { "bins": ["uv"], "env": [] },
         "primaryEnv": "GEMINI_API_KEY",
         "install":
           [
@@ -47,8 +47,12 @@ uv run {baseDir}/scripts/generate_image.py --prompt "combine these into one scen
 
 API key
 
-- `GEMINI_API_KEY` env var
-- Or set `skills."nano-banana-pro".apiKey` / `skills."nano-banana-pro".env.GEMINI_API_KEY` in `~/.openclaw/openclaw.json`
+The skill attempts to use API keys in this priority order:
+1. `AI_GATEWAY_API_KEY` env var (if available, uses AI Gateway)
+2. `GEMINI_API_KEY` env var (direct Gemini API)
+3. Config file: `skills."nano-banana-pro".apiKey` / `skills."nano-banana-pro".env.GEMINI_API_KEY` in `~/.openclaw/openclaw.json`
+
+AI Gateway is preferred for cost-efficiency and unified API management.
 
 Notes
 
