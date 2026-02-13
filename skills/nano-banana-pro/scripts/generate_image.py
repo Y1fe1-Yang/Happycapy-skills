@@ -11,10 +11,10 @@
 Generate images using Google's Nano Banana Pro (Gemini 3 Pro Image) API.
 
 Usage:
-    uv run generate_image.py --prompt "your image description" --filename "output.png" [--resolution 1K|2K|4K] [--api-key KEY]
+    python3 generate_image.py --prompt "your image description" --filename "output.png" [--resolution 1K|2K|4K] [--api-key KEY]
 
 Multi-image editing (up to 14 images):
-    uv run generate_image.py --prompt "combine these images" --filename "output.png" -i img1.png -i img2.png -i img3.png
+    python3 generate_image.py --prompt "combine these images" --filename "output.png" -i img1.png -i img2.png -i img3.png
 """
 
 import argparse
@@ -96,9 +96,6 @@ def call_ai_gateway(api_key: str, prompt: str, input_images: list, resolution: s
 
     # Parse response (OpenAI-compatible format)
     result = response.json()
-
-    # Debug: print the actual response structure
-    print(f"DEBUG: Full response: {result}")
 
     # Extract image data from response
     # Expected format: {"data": [{"b64_json": "base64_encoded_image_data"}]} or {"data": [{"url": "..."}]}
